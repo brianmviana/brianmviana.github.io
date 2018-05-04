@@ -1,0 +1,294 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Times New Roman", Georgia, Arial;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.menu{
+    position: fixed;
+    width: 100%;
+    top: 0px;
+    background-color: black;
+    color: white;
+    z-index: 99;
+}
+
+.menu ul {
+    text-decoration: none;
+    display: block;
+}
+
+.menu ul li{
+    list-style: none;
+    float: right;
+}
+
+.menu ul li a{
+    font-size: 16px;
+    width: 120px;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    padding: 9px;
+    border-bottom: 1px solid whitesmoke;
+    margin: 5px;
+    transition: border-radius 500ms;
+}
+
+.menu ul li a:hover, .menu ul li a.active{
+    color: #00acc1;
+    border-bottom-color: #00acc1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: border-radius 500ms;
+}
+
+section{
+    width: 100%;
+    min-height: 500px;
+    background-color: #00acc1;
+    margin-bottom: 2px;
+}
+
+article{
+    padding: 70px 0px;
+    color: white;
+}
+
+.conteiner{
+    margin: auto;
+    width: 70%;
+}
+
+.opacidade{
+    width: 100%;
+    height: 100%;
+    background-size: 100% 100%;
+    opacity: 0.5;
+    z-index: 1;
+    background-color: silver;
+    position: absolute;
+    /*filter: blur(15px);*/
+}
+
+.background1{
+    background: url(../img/bg1.jpg);
+}
+.background2{
+    background: url(../img/bg2.jpg);
+}
+.background3{
+    background: url(../img/bg3.jpg);
+}
+
+
+.parallax{
+    height: 100vh;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+.conteudoParallax{
+    background-color: rgba(0,0,0,0.8);
+    text-align: center;
+    z-index: 2;
+    position: relative;
+    width: 70vw;
+    height: calc(100% - 150px);
+    top: 5px;
+    left: 15vw;
+    right: 15vw;
+}
+div.conteudo {
+    background-color: black;
+    text-align: center;
+    padding: 50px 5px 10px;
+}
+.conteudo {
+    background-color: black;
+    text-align: center;
+    padding-top: 50px;
+    /*margin-bottom: 2px;*/
+}
+.conteudo span,.conteudoParallax span{
+    font-size: 30px;
+    color: white;
+    cursor: default;
+}
+
+.conteudo .nameTitle, .conteudoParallax .nameTitle{
+    cursor: default;
+    font-size: 50px;
+    color: white;
+}
+
+.conteudo p,.conteudoParallax p{
+    font-size: 20px;
+    color: white;
+    cursor: default;
+}
+
+.sobremim{
+    width: 100%;
+    height: 100%;
+}
+.sobremim .coluna1{
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+.sobremim .coluna2{
+    width: 80%;
+    height: 100%;
+    float: right;
+}
+
+.sobremim span{
+    position: relative;
+}
+
+.sobremim img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    /*border-top-right-radius: 0px;*/
+    /*border-bottom-right-radius: 0px;*/
+    /*border-bottom-left-radius: 0px;*/
+}
+
+.sobremim p{
+    text-align: left;
+    padding-left: 25px;
+}
+
+.curriculo{
+    margin-top: 50px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(245,245,245,0.9);
+    transition: background-color 500ms;
+    color: black;
+}
+
+.curriculo:hover{
+    /*background-color: rgba(245,245,245,0.5);*/
+    background-color: #00acc1;
+    color: black;
+    transition: background-color 500ms;
+}
+
+
+.contatos{
+    text-decoration: none;
+    width: 100%;
+}
+.contatos .contato{
+    display: inline-block;
+    width: calc(20% - 20px);
+    min-height: 70px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+}
+
+.contatos a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: color 500ms;
+}
+
+.contatos i{
+    display: block;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.contatos .contato a:hover{
+    color: #00acc1;
+    transition: color 500ms;
+}
+
+
+.redesSociais{
+    font-size: 40px;
+    padding: 10px 20px 0px;
+    text-align: center;
+    color: white;
+    background-color: black;
+}
+
+.redesSociais i{
+    color: white;
+    cursor: pointer;
+    transition: color 500ms;
+}
+
+.redesSociais i:hover{
+    color: #00acc1;
+    cursor: pointer;
+    transition: color 500ms;
+}
+
+.centralizar{
+    position: relative;
+    padding: 20%;
+}
+
+.lista{
+    list-style: none;
+    width: calc(100% - 130px);
+    margin: 10px 50px;
+    padding: 10px;
+    font-size: 20px;
+    display: inline-list-item;
+    text-align: center;
+}
+
+.lista ul{
+    width: 100%;
+    display: inline-block;
+    list-style: none;
+    text-align: center;
+}
+
+.lista ul li{
+    width: 30%;
+    margin: 0px 1%;
+    padding: 5px 0px;
+    display: inline-block;
+    list-style: none;
+    text-align: left;
+}
+
+.lista ul li i{
+    color: white;
+    transition: color 500ms;
+}
+.lista ul li i:hover{
+    color: #00acc1;
+    cursor: default;
+    transition: color 500ms;
+    /*background-color: rgba(0,0,0,0.1);*/
+}
+
+
+
+
+.rodape{
+    background-color: black;
+    text-align: center;
+}
+
+.rodape p{
+    color: white;
+    padding: 10px 5px ;
+}
