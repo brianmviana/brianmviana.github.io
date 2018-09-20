@@ -1,45 +1,86 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: "Times New Roman", Georgia, Arial;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
 }
+body{
+    background-color: #2c70ff;
+}
+
+ul{
+    list-style: none;
+}
+
 a{
     text-decoration: none;
     color: white;
 }
-.menu{
-    position: fixed;
-    width: 100%;
-    top: 0px;
-    background-color: black;
-    color: white;
-    z-index: 99;
-}
 
-.menu ul {
-    text-decoration: none;
+img{
     display: block;
+    max-width: 100%;
 }
 
-.menu ul li{
-    list-style: none;
-    float: right;
+/*Menu*/
+
+.menu-bg{
+    background: black;
+    position: fixed;
+    z-index: 99;
+    width: 100%;
 }
 
-.menu ul li a{
-    font-size: 16px;
+.menu{
+    max-width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu a{
+    color: white;
+}
+
+.menu-logo{
+    font-size: 2.25em;
+    font-weight: bold;
+    margin: 0 10px;
+}
+
+.menu-nav ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.menu-nav a {
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
     width: 120px;
     text-align: center;
-    display: inline-block;
     text-decoration: none;
     color: white;
-    padding: 9px;
     border-bottom: 1px solid whitesmoke;
     margin: 5px;
     transition: border-radius 500ms;
 }
 
-.menu ul li a:hover, .menu ul li a.active{
+.menu-bt{
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    background: transparent;
+    color: white;
+    font-size: 1.5em;
+    border: 1px solid white;
+    border-radius: 10%;
+    padding: 2px 10px 3px 10px;
+
+}
+
+.menu-nav a:hover{
     color: #00acc1;
     border-bottom-color: #00acc1;
     border-bottom-left-radius: 10px;
@@ -47,31 +88,122 @@ a{
     transition: border-radius 500ms;
 }
 
-section{
-    width: 100%;
-    min-height: 500px;
-    background-color: #00acc1;
-    margin-bottom: 2px;
+.menu-logo a:hover, .menu-bt a:hover{
+    color: #00acc1;
+    border-color: #00acc1;
 }
 
-article{
-    padding: 70px 0px;
+.side-nav{
+    display: none;
+    background-color: black;
+    width : 300px;
+    max-width: 300px;
+    justify-content: center;
+    margin: auto;
+}
+
+.side-nav ul{
+    /*flex: 1;*/
+    width: 300px;
+    max-width: 300px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.side-nav a {
+    font-size: 1.1em;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border-bottom: 1px solid whitesmoke;
+    margin: 10px 5px;
+    transition: border-radius 500ms;
+}
+.side-nav a:hover{
+    color: #00acc1;
+    border-bottom-color: #00acc1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    transition: border-radius 500ms;
+}
+
+
+/* RESPONSIVE MENU */
+@media screen and (max-width: 800px){
+    .menu-nav{
+        display: none;
+    }
+    .menu-bt{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+
+
+/* IDENTIFICAÇÃO */
+
+.identificacao {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 100vh;
+    padding: 15px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.identificacao-text{
+    flex: 1 1 300px;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 10px;
+    z-index: 2;
     color: white;
 }
 
-.conteiner{
-    margin: auto;
-    width: 70%;
+.identificacao-text h1{
+    font-size: 2em;
 }
+.identificacao-text span{
+    font-size: 1em;
+}
+
+/* CURSOR EFFECT */
+.cursor {
+    color: white;
+    animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    from, to {
+        color: transparent;
+    }
+    50% {
+        color: white;
+    }
+}
+
+
+
+
+/* PARALLAX */
 
 .opacidade{
     width: 100%;
     height: 100%;
     background-size: 100% 100%;
-    opacity: 0.5;
     z-index: 1;
-    background-color: silver;
     position: absolute;
+    background-color: rgba(0,0,0,0.8);
+    /*opacity: 0.5;*/
+    /*background-color: silver;*/
     /*filter: blur(15px);*/
 }
 
@@ -97,198 +229,5 @@ article{
     z-index: 2;
     position: relative;
     width: 70vw;
-    height: calc(100% - 150px);
-    top: 5px;
-    left: 15vw;
-    right: 15vw;
-}
-div.conteudo {
-    background-color: black;
-    text-align: center;
-    padding: 50px 5px 10px;
-}
-.conteudo {
-    background-color: black;
-    text-align: center;
-    padding-top: 50px;
-    /*margin-bottom: 2px;*/
-}
-.conteudo span,.conteudoParallax span{
-    font-size: 30px;
-    color: white;
-    cursor: default;
-}
 
-.conteudo .nameTitle, .conteudoParallax .nameTitle{
-    cursor: default;
-    font-size: 50px;
-    color: white;
-}
-
-.conteudo p,.conteudoParallax p{
-    font-size: 20px;
-    color: white;
-    cursor: default;
-}
-
-.sobremim{
-    width: 100%;
-    height: 100%;
-}
-.sobremim .coluna1{
-    width: 20%;
-    height: 100%;
-    float: left;
-}
-.sobremim .coluna2{
-    width: 80%;
-    height: 100%;
-    float: right;
-}
-
-.sobremim span{
-    position: relative;
-}
-
-.sobremim img{
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    /*border-top-right-radius: 0px;*/
-    /*border-bottom-right-radius: 0px;*/
-    /*border-bottom-left-radius: 0px;*/
-}
-
-.sobremim p{
-    text-align: left;
-    padding-left: 25px;
-}
-
-.curriculo{
-    margin-top: 50px;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: rgba(245,245,245,0.9);
-    transition: background-color 500ms;
-    color: black;
-}
-
-.curriculo:hover{
-    /*background-color: rgba(245,245,245,0.5);*/
-    background-color: #00acc1;
-    color: black;
-    transition: background-color 500ms;
-}
-
-
-.contatos{
-    text-decoration: none;
-    width: 100%;
-}
-.contatos .contato{
-    display: inline-block;
-    width: calc(20% - 20px);
-    min-height: 70px;
-    padding: 10px;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-}
-
-.contatos a{
-    display: block;
-    width: 100%;
-    text-decoration: none;
-    color: white;
-    font-size: 20px;
-    transition: color 500ms;
-}
-
-.contatos i{
-    display: block;
-    font-size: 50px;
-    text-align: center;
-    text-decoration: none;
-}
-
-.contatos .contato a:hover{
-    color: #00acc1;
-    transition: color 500ms;
-}
-
-
-.redesSociais{
-    font-size: 40px;
-    padding: 10px 20px 0px;
-    text-align: center;
-    color: white;
-    background-color: black;
-}
-
-.redesSociais i{
-    color: white;
-    cursor: pointer;
-    transition: color 500ms;
-}
-
-.redesSociais i:hover{
-    color: #00acc1;
-    cursor: pointer;
-    transition: color 500ms;
-}
-
-.centralizar{
-    position: relative;
-    padding: 20%;
-}
-
-.lista{
-    list-style: none;
-    width: calc(100% - 130px);
-    margin: 10px 50px;
-    padding: 10px;
-    font-size: 20px;
-    display: inline-list-item;
-    text-align: center;
-}
-
-.lista ul{
-    width: 100%;
-    display: inline-block;
-    list-style: none;
-    text-align: center;
-}
-
-.lista ul li{
-    width: 30%;
-    margin: 0px 1%;
-    padding: 5px 0px;
-    display: inline-block;
-    list-style: none;
-    text-align: left;
-}
-
-.lista ul li i{
-    color: white;
-    transition: color 500ms;
-}
-.lista ul li i:hover{
-    color: #00acc1;
-    cursor: default;
-    transition: color 500ms;
-    /*background-color: rgba(0,0,0,0.1);*/
-}
-
-
-
-
-.rodape{
-    background-color: black;
-    text-align: center;
-}
-
-.rodape p{
-    color: white;
-    padding: 10px 5px ;
 }
