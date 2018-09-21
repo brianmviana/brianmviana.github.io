@@ -5,125 +5,221 @@
     <title>Brian M. Viana</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Josefin+Sans" rel="stylesheet">
     <link rel="stylesheet" href="css/dist/fontdev.min.css">
-    <!--<link rel="stylesheet" href="https://cdn.rawgit.com/leojaimesson/fontdev/master/dist/fontdev.min.css">-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-    <link rel="icon" href="img/favicon.png">
 </head>
 <body>
-
-<nav class="menu">
-    <div class="conteiner">
-        <ul>
-            <li>
-                <a href="#contato" class="scrollSuave">Contato</a>
-            </li>
-            <li>
-                <a href="#habilidades" class="scrollSuave">Habilidades</a>
-            </li>
-            <li>
-                <a href="#sobre" class="scrollSuave">Sobre</a>
-            </li>
-            <li>
-                <a href="#inicio" class="scrollSuave">Inicio</a>
-            </li>
-        </ul>
-    </div>
-</nav>
-
-
-<a id="inicio"></a>
-<section class="parallax background1">
-    <div class="opacidade"></div>
-    <article class="conteudoParallax">
-        <div class="centralizar">
-            <span class="nameTitle"><a href="#inicio" class="scrollSuave">BRIAN M. VIANA</a></span>
-            <p>Graduando em Engenharia de Software</p>
-            <p>Técnico em Redes de Computadores</p>
+<header class="menu-bg">
+    <div class="menu">
+        <div class="menu-logo">
+            <a href="#inicio" class="scrollSuave">< / ></a>
         </div>
+        <nav class="menu-nav">
+            <ul>
+                <li><a href="#inicio" class="scrollSuave">Inicio</a></li>
+                <li><a href="#sobre" class="scrollSuave">Sobre</a></li>
+                <li><a href="#habilidades" class="scrollSuave">Habilidades</a></li>
+                <li><a href="#contato" class="scrollSuave">Contato</a></li>
+            </ul>
+        </nav>
+        <button href="#" class="menu-bt" id="menu-bt">&equiv;</button>
+    </div>
+
+    <nav class="side-nav" id="sidenav">
+        <ul>
+            <li><a href="#inicio" class="scrollSuave">Inicio</a></li>
+            <li><a href="#sobre" class="scrollSuave">Sobre</a></li>
+            <li><a href="#habilidades" class="scrollSuave">Habilidades</a></li>
+            <li><a href="#contato" class="scrollSuave">Contato</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="identificacao parallax background1" id="inicio">
+    <div class="opacidade"></div>
+    <article class="identificacao-text">
+        <h1><a href="#inicio">BRIAN M. VIANA <span class="cursor">_</span></a></h1>
+        <p>Graduando em Engenharia de Software</p>
+        <p>Técnico em Redes de Computadores</p>
     </article>
 </section>
 
-<a id="sobre"></a>
-<section class="conteudo">
-    <div class="conteiner">
-        <div class="sobremim">
-            <div class="coluna1">
-                <img src="img/perfil.jpg">
+<section class="sobre parallax background1" id="sobre">
+    <div class="opacidade"></div>
+    <div class="opacidade"></div>
+    <article class="sobre-container">
+        <div class="sobre-perfil">
+            <div class="sobre-img">
+                <svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
+                            <image xlink:href="./img/perfil.jpg" x="-25" width="150" height="100" />
+                        </pattern>
+                    </defs>
+                    <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
+                </svg>
+            </div>
+            <div class="sobre-curriculo">
                 <a href="pdf/Brian%20Curriculo.pdf" class="curriculo">Curriculo</a>
             </div>
-            <div class="coluna2">
-                <span><a href="#sobre" class="scrollSuave">SOBRE MIM</a></span>
-                <p>Meu nome é Brian Marques Viana, atualmente sou estudante do curso de Engenharia de Software na UFC Campus Quixadá, além disso,
-                    sou Técnico em Redes de Computadores pela escola Eeep Francisca Neilyta Carneiro Albuquerque.</p>
-             </div>
         </div>
-    </div>
-</section>
-
-<a id="habilidades"></a>
-<section class="parallax background2">
-    <div class="opacidade"></div>
-    <article class="conteudoParallax">
-        <span><a href="#habilidades" class="scrollSuave">HABILIDADES</a></span>
-        <div class="lista">
-            <ul>
-                <li> <i class="fd-icon fd-icon-java"> JAVA</i></li>
-                <li> <i class="fd-icon fd-icon-html5"> HTML5</i></li>
-                <li> <i class="fd-icon fd-icon-mysql"> MYSQL</i></li>
-                <li> <i class="fd-icon fd-icon-python"> PYTHON</i></li>
-                <li> <i class="fd-icon fd-icon-css3"> CSS3</i></li>
-                <li> <i class="fd-icon fd-icon-postgresql"> POSTGRESQL</i></li>
-                <li> <i class="fd-icon fd-icon-c"> C</i></li>
-                <li> <i class="fd-icon fd-icon-javascript"> JAVASCRIPT</i></li>
-                <li> <i class="fd-icon fd-icon-arduino"> ARDUINO</i></li>
-                <li> <i class="fd-icon fd-icon-cplusplus"> C++</i></li>
-                <li> <i class="fd-icon fd-icon-jquery"> JQUERY</i></li>
-                <li> <i class="fd-icon fd-icon-android"> ANDROID</i></li>
-            </ul>
+        <div class="sobre-info">
+            <h1><a href="#sobre">SOBRE MIM</a></h1>
+            <p>Meu nome é Brian Marques Viana, atualmente sou estudante do curso de Engenharia de Software na UFC Campus Quixadá, além disso, sou Técnico em Redes de Computadores, também sou amante de tecnologia e adoro desafios</p>
         </div>
     </article>
 </section>
 
-<a id="contato"></a>
-<div class="conteudo">
-    <span><a href="#contato" class="scrollSuave">CONTATOS</a></span>
-    <div class="contatos">
-        <div class="contato">
-            <a href="mailto:brianmviana@gmail.com">
-                <i class="fd-icon fd-icon-gmail"></i>
-                brianmviana@gmail.com
-            </a>
-        </div>
-        <div class="contato">
-            <a href="tel:88993245466">
-                <i class="fd-icon fd-icon-whatsap"></i>
-                (88) 9 9324-5466
-        </a>
+<section class="parallax background2" id="habilidades">
+    <!--<div class="opacidade"></div>-->
+    <div class="conteudoParallax">
+        <div class="habilidade" >
+            <h1><a href="#habilidades">HABILIDADES</a></h1>
+
+            <div class="habilidade-item">
+                <h2>FRONT-END</h2>
+                <ul class="lista">
+                    <li class="item-lista">HTML 5</li>
+                    <ul class="sub-lista">
+                        <li class="title-lista">CSS 3</li>
+                        <li class="item-lista">MATERIALIZE</li>
+                        <li class="item-lista">BOOTSTRAP</li>
+                    </ul>
+                    <ul class="sub-lista">
+                        <li class="title-lista">JAVASCRIPT</li>
+                        <li class="item-lista">JQUERY</li>
+                    </ul>
+                </ul>
+            </div>
+
+            <div class="habilidade-item">
+                <h2>BACK-END</h2>
+                <ul class="lista">
+                    <ul class="sub-lista">
+                        <li class="title-lista">JAVA</li>
+                        <li class="item-lista">SPRING BOOT</li>
+                    </ul>
+                    <ul class="sub-lista">
+                        <li class="title-lista">JAVASCRIPT</li>
+                        <li class="item-lista">NODEJS</li>
+                    </ul>
+                </ul>
+            </div>
+
+            <div class="habilidade-item">
+                <h2>MOBILE</h2>
+                <ul class="lista">
+                    <ul class="sub-lista">
+                        <li class="title-lista">ANDROID</li>
+                        <li class="item-lista">JAVA</li>
+                    </ul>
+                </ul>
+            </div>
+
+            <div class="habilidade-item">
+                <h2>BANCO DE DADOS</h2>
+                <ul class="lista">
+                    <ul class="sub-lista">
+                        <li class="title-lista">SQL</li>
+                        <li class="item-lista">MYSQL</li>
+                        <li class="item-lista">POSTGRESQL</li>
+                    </ul>
+                    <ul class="sub-lista">
+                        <li class="title-lista">NOSQL</li>
+                        <li class="item-lista">MONGODB</li>
+                    </ul>
+
+                </ul>
+            </div>
+
+            <div class="habilidade-item">
+                <h2>Engenharia de Software</h2>
+                <ul class="lista">
+                    <li class="item-lista">Documentação de Software</li>
+                    <li class="item-lista">Engenharia de Requisitos</li>
+                    <li class="item-lista">Metodologias Ágeis</li>
+                </ul>
+            </div>
+
+            <div class="habilidade-item">
+                <h2>FERRAMENTAS</h2>
+                <ul class="lista">
+                    <li class="item-lista">GIT</li>
+                    <li class="item-lista">ARDUINO</li>
+                </ul>
+            </div>
+
+            <div class="habilidade-item">
+                <h2>NUVEM</h2>
+                <ul class="lista">
+                    <li class="item-lista">AMAZON AWS</li>
+                    <li class="item-lista">OPEN STACK</li>
+                </ul>
+            </div>
+
         </div>
     </div>
-    <div class="redesSociais">
-        <a href="https://github.com/brianmviana/"><i class="fd-icon fd-icon-github"></i></a>
-        <a href="https://www.linkedin.com/in/brianmviana/"><i class="fd-icon fd-icon-linkedin"></i></a>
-        <a href="https://www.facebook.com/brianmviana"><i class="fd-icon fd-icon-facebook"></i></a>
+</section>
+
+<section class="contato" id="contato">
+    <div class="contato-container">
+        <div class="contato-info">
+            <h1><a href="#contato">CONTATOS</a></h1>
+        </div>
+        <div class="contatos">
+            <div class="item-contato">
+                <a href="mailto:brianmviana@gmail.com">
+                    <i class="fd-icon fd-icon-gmail"></i>
+                    brianmviana@gmail.com
+                </a>
+            </div>
+            <div class="item-contato">
+                <a href="tel:88993245466">
+                    <i class="fd-icon fd-icon-whatsap"></i>
+                    (88) 9 9324-5466
+                </a>
+            </div>
+        </div>
+        <div class="contato-info">
+            <h2>REDES SOCIAIS</h2>
+        </div>
+        <div class="redes-sociais">
+            <div class="item-redes-sociais">
+                <a href="https://github.com/brianmviana/"><i class="fd-icon fd-icon-github"></i></a>
+            </div>
+            <div class="item-redes-sociais">
+                <a href="https://www.linkedin.com/in/brianmviana/"><i class="fd-icon fd-icon-linkedin"></i></a>
+            </div>
+            <div class="item-redes-sociais">
+                <a href="https://www.facebook.com/brianmviana"><i class="fd-icon fd-icon-facebook"></i></a>
+            </div>
+        </div>
+
     </div>
-</div>
+</section>
 
-
-<footer class="rodape">
+<footer class="footer">
     <p>Brian M. Viana © Todos os direitos reservados.</p>
 </footer>
 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script>
+    $(document).ready(function() {
+        $('#menu-bt').click(function () {
+            $('#sidenav').slideToggle('slow');
+        });
+    });
+
     var $doc = $('html, body');
     $('a').click(function() {
         $doc.animate({
-            scrollTop: $( $.attr(this, 'href') ).offset().top
+            scrollTop: $($.attr(this, 'href')).offset().top
         }, 500);
+        $('#sidenav').hide('slow');
         return false;
     });
 </script>
 </body>
-
-
 </html>
