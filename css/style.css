@@ -49,7 +49,7 @@ img{
 .conteudoParallax{
     min-width: 100%;
     min-height: 100vh;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.9);
     z-index: 2;
     position: relative;
 }
@@ -383,13 +383,7 @@ h1 a{
 .habilidade-item .lista .item-lista i,
 .habilidade-item .lista .sub-lista .title-lista i,
 .habilidade-item .lista .sub-lista .item-lista i{
-    /*content: '';*/
-    /*display: block;*/
-    /*width: 6px;*/
-    /*height: 6px;*/
     margin: 0 10px;
-    /*background: #2c70ff;*/
-    /*border-radius: 50%;*/
 }
 
 
@@ -432,12 +426,13 @@ h1 a{
     color: white;
     font-size: 1.25em;
     padding: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 .contato-info a{
     padding: 10px;
 }
 .contatos{
-    flex: 3;
+    flex: 1;
     font-size: 1.25em;
     line-height: 1.4em;
     border-bottom: 1em;
@@ -446,29 +441,37 @@ h1 a{
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
 }
 .item-contato{
     flex: 1;
     margin: 0 10px;
-    padding: 20px;
+    /*padding: 20px;*/
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
 }
 .item-contato a{
-    padding: 20px;
+    /*padding: 20px;*/
     display: flex;
     flex-direction: column;
     border-radius: 20px;
     /*background-color: rgba(255,255,255,0.05);*/
     transition: background-color 500ms;
+}
+.item-contato p{
+    flex: 1;
+    font-size: 0.8em;
 
 }
-.item-contato a i{
+.item-contato h2{
     flex: 1;
-    font-size: 3em;
+    padding: 0 0 50px 0;
+    font-size: 1.875rem;
 }
+
 .redes-sociais{
     flex: 3;
     font-size: 1.25em;
