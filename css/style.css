@@ -478,7 +478,7 @@ img{
 }
 .item-contato a:hover, .item-redes-sociais:hover{
     background-color: #2c70ff;
-    color: black;
+    /*color: black;*/
     transition: background-color 500ms;
     border-radius: 20px;
 }
