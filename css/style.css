@@ -247,17 +247,26 @@ img{
     flex: 1 1 160px;
     margin: 0 10px;
 }
-.sobre-perfil .sobre-curriculo .curriculo{
+.sobre-curriculo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.sobre-curriculo .curriculo{
+    flex: 0;
     margin-top: 50px;
+    /*width: 100%;*/
+
     display: block;
-    padding: 10px;
+    padding: 10px 30px;
     border-radius: 5px;
     background-color: rgba(245,245,245,0.9);
     transition: background-color 500ms;
     color: black;
     text-align: center;
 }
-.sobre-perfil .sobre-curriculo .curriculo:hover{
+.sobre-curriculo .curriculo:hover{
     /*background-color: rgba(245,245,245,0.5);*/
     background-color: #2c70ff;
     color: black;
@@ -444,7 +453,7 @@ img{
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    background-color: rgba(255,255,255,0.05);
+    /*background-color: rgba(255,255,255,0.05);*/
     transition: background-color 500ms;
 
 }
@@ -466,17 +475,17 @@ img{
 }
 .item-redes-sociais{
     flex: 0;
-    margin: 0 10px;
+    margin: 10px 10px;
     padding: 10px;
     flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     font-size: 2.5em;
     border-radius: 20px;
-    background-color: rgba(255,255,255,0.05);
+    /*background-color: rgba(255,255,255,0.05);*/
     transition: background-color 500ms;
 }
-.item-contato a:hover, .item-redes-sociais:hover{
+.item-redes-sociais:hover{
     background-color: #2c70ff;
     /*color: black;*/
     transition: background-color 500ms;
