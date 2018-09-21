@@ -114,8 +114,8 @@ img{
     transition: border-radius 500ms;
 }
 .menu-logo a:hover, .menu-bt a:hover{
-    color: #00acc1;
-    border-color: #00acc1;
+    color: #2c70ff;
+    border-color: #2c70ff;
 }
 .side-nav{
     display: none;
@@ -145,8 +145,8 @@ img{
     transition: border-radius 500ms;
 }
 .side-nav a:hover{
-    color: #00acc1;
-    border-bottom-color: #00acc1;
+    color:#2c70ff;
+    border-bottom-color: #2c70ff;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     transition: border-radius 500ms;
@@ -210,11 +210,65 @@ img{
 
 /* SOBRE MIM */
 
+.sobre{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.sobre .sobre-container{
+    max-width: 80vw;
+    margin: 10px auto;
+    padding: 80px 0px;
+    /*border-top: 2px solid #2c70ff;*/
+    /*border-bottom: 2px solid #2c70ff;*/
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+}
+.sobre-info{
+    flex: 2 1 300px;
+    margin: 0 10px;
+}
+.sobre-info h1{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+    margin-bottom: .5em;
+}
+.sobre-info p{
+    font-size: 1.25em;
+    line-height: 1.4em;
+    border-bottom: 1em;
+    color: white;
+}
+.sobre-perfil{
+    flex: 1 1 160px;
+    margin: 0 10px;
+}
+.sobre-perfil .sobre-curriculo .curriculo{
+    margin-top: 50px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(245,245,245,0.9);
+    transition: background-color 500ms;
+    color: black;
+    text-align: center;
+}
+.sobre-perfil .sobre-curriculo .curriculo:hover{
+    /*background-color: rgba(245,245,245,0.5);*/
+    background-color: #2c70ff;
+    color: black;
+    transition: background-color 500ms;
+}
+
 
 /* HABILIDADES */
 .habilidade{
     max-width: 80vw;
-    margin: 10px auto;
+    margin: 0px auto;
     padding: 80px 0px;
     display: flex;
     flex-wrap: wrap;
@@ -281,22 +335,22 @@ img{
     transition: color 500ms;
 }
 .habilidade-item .lista .item-lista:hover{
-    color: #00acc1;
+    color: #2c70ff;
     cursor: default;
     transition: color 500ms;;
 }
 .habilidade-item .lista .sub-lista:hover{
-    color: #00acc1;
+    color: #2c70ff;
     cursor: default;
     transition: color 500ms;
 }
 .habilidade-item .lista .sub-lista .title-lista:hover{
-    color: #00acc1;
+    color: #2c70ff;
     cursor: default;
     transition: color 500ms;
 }
 .habilidade-item .lista .sub-lista .item-lista:hover{
-    color: #00acc1;
+    color: #2c70ff;
     cursor: default;
     transition: color 500ms;
 }
@@ -319,4 +373,126 @@ img{
     margin: 0 10px;
     background: #2c70ff;
     border-radius: 50%;
+}
+
+
+/*Contato*/
+.contato{
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    background-color: black;
+}
+.contato .contato-container{
+    max-width: 80vw;
+    width: 80vw;
+    margin: 10px auto;
+    padding: 10px 0px;
+    border-top: 2px solid #2c70ff;
+    border-bottom: 2px solid #2c70ff;
+    display: flex;
+    flex-wrap: wrap;
+    z-index: 2;
+    flex-direction: column;
+
+}
+.contato-info{
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+.contato-info h1{
+    text-align: center;
+    color: white;
+    font-size: 2.5em;
+}
+.contato-info h2{
+    text-align: center;
+    color: white;
+    font-size: 1.25em;
+    padding: 10px;
+}
+.contato-info a{
+    padding: 10px;
+}
+.contatos{
+    flex: 3;
+    font-size: 1.25em;
+    line-height: 1.4em;
+    border-bottom: 1em;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: space-between;
+}
+.item-contato{
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.item-contato a{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.05);
+    transition: background-color 500ms;
+
+}
+.item-contato a i{
+    flex: 1;
+    font-size: 3em;
+}
+.redes-sociais{
+    flex: 3;
+    font-size: 1.25em;
+    line-height: 1.4em;
+    border-bottom: 1em;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+}
+.item-redes-sociais{
+    flex: 0;
+    margin: 0 10px;
+    padding: 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 2.5em;
+    border-radius: 20px;
+    background-color: rgba(255,255,255,0.05);
+    transition: background-color 500ms;
+}
+.item-contato a:hover, .item-redes-sociais:hover{
+    background-color: #2c70ff;
+    color: black;
+    transition: background-color 500ms;
+    border-radius: 20px;
+}
+
+/*Footer*/
+.footer{
+    display: flex;
+    background: black;
+    align-items: center;
+}
+.footer p{
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    font-size: 1em;
+    color: white;
 }
