@@ -448,35 +448,31 @@ h1 a{
     display: flex;
     flex-wrap: wrap;
     max-width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
+    flex-flow: column;
 }
 .item-contato{
-    flex: 1;
     margin: 0 10px;
-    /*padding: 20px;*/
-    flex-direction: row;
     flex-wrap: wrap;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
+    display: block;
+   /* background-color: rgba(255,255,255,0.05 */
+    flex: 1;
 }
-.item-contato a{
-    /*padding: 20px;*/
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    /*background-color: rgba(255,255,255,0.05);*/
-    transition: background-color 500ms;
-}
+
 .item-contato p{
     flex: 1;
     font-size: 0.8em;
+    display: block;
 
 }
 .item-contato h2{
-    flex: 1;
-    padding: 0 0 50px 0;
+    flex: 2;
+    padding: 0 0 40px 0;
     font-size: 1.875rem;
+    display: block;
 }
 
 .redes-sociais{
