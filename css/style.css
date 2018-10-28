@@ -312,15 +312,15 @@ h1 a{
     border-top: 2px solid #2c70ff;
     border-bottom: 2px solid #2c70ff;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     z-index: 2;
     flex-direction: column;
 
 }
 .contato-info{
     flex: 1;
-    margin: 0 10px;
-    padding: 20px;
+    margin: 0px;
+    padding: 20px 0px;
     color: white;
     text-align: center;
 }
@@ -407,6 +407,24 @@ h1 a{
     transition: color 500ms;
     border-radius: 20px;
 }
+
+@media screen and (max-width: 500px){
+    .sobre h1, .habilidade h1, .contato h1{
+        font-size: 2em;
+    }
+    .item-contato p {
+        font-size: 0.6em;
+    }
+    .item-contato h2{
+        font-size: 90%;
+        font-weight: bold;
+        padding: 0px 0px 20px 0px;
+    }
+    .contato-info{
+        padding: 10px 0px;
+    }
+}
+
 
 /*Footer*/
 .footer{
