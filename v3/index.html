@@ -38,13 +38,13 @@
     
     <section id="identificacao" class="parallax">
         <div class="section-bg">
-            <div class="line"></div>
+            <div class="identificacao-line"></div>
             <div class="identificacao-text">
                 <p>OLÁ, MEU NOME É</p>
                 <h1>BRIAN M. VIANA</h1>
                 <p>EU SOU UM DESENVOLVEDOR FULL STACK</p>
             </div>
-            <div class="line"></div>
+            <div class="identificacao-line"></div>
         </div>
     </section>
     
@@ -55,10 +55,26 @@
                     <div class="coluna-1">
                         
                         <div class="sobre-img">
-                            <img src="./img/perfil.jpg" alt="">
+                            <svg viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <defs>
+                                    <pattern id="img" patternUnits="userSpaceOnUse" width="100" height="100">
+                                        <image xlink:href="./img/perfil.jpg" x="-25" width="150" height="100" />
+                                    </pattern>
+                                </defs>
+                                <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill="url(#img)"/>
+                            </svg>
                         </div>
+                        
                         <div class="bt-curriculo">
-                            <button>Curriculo</button>
+                                <div class="btn-curriculo">
+                                    <a href="pdf/brianmviana_curriculo.pdf" download="brianmviana_curriculo.pdf">
+                                        <span class="text">MEU CURRÍCULO</span>
+                                        <span class="line -right"></span>
+                                        <span class="line -top"></span>
+                                        <span class="line -left"></span>
+                                        <span class="line -bottom"></span>
+                                    </a>
+                            </div>
                         </div>
                         
                     </div>

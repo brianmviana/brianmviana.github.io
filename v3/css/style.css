@@ -68,7 +68,7 @@ section{
     font-family: 'Questrial', sans-serif;
 }
 
-.line{
+.identificacao-line{
     flex: 2;
     height: 3px;
     background: #c4c4c4; 
@@ -124,16 +124,17 @@ section{
     justify-content: space-around;
     flex-direction: column;    
 }
-.sobre-img img{
-    width: 100%;
+.sobre-img svg polygon{
+    stroke: #ffffff;
+    stroke-width: 1px;
+ 
 }
 
 .bt-curriculo{
     flex: 1;
     display: flex;
-    align-items: stretch;
-    justify-content: space-around;
-    flex-direction: column;    
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 fieldset{
@@ -182,21 +183,10 @@ fieldset p{
 }
 
 
-.line2{
-    flex: 1;
-    width: 80%;
-    margin: 0 auto;
-    height: 3px;
-    background: #c4c4c4; 
-    position: absolute;
-    display: flex;
-    top: -3px;
-}
-
 
 
 @media only screen and (max-width: 1080px) {
-    .line{
+    .identificacao-line{
         flex: 1;
         height: 3px;
     }
@@ -209,7 +199,7 @@ fieldset p{
 }
 
 @media only screen and (max-width: 800px) {
-    .line{
+    .identificacao-line{
         flex: 0 1 50px;
         height: 3px;
     }
@@ -243,7 +233,7 @@ fieldset p{
     .identificacao-text{
         border: none;
     }
-    .line{
+    .identificacao-line{
         flex: 0;
         height: 0px;
     }
