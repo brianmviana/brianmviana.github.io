@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.ico">
+    <title>Brian M. Viana</title>
+    <link href="https://fonts.googleapis.com/css?family=Anton|Josefin+Sans|Montserrat|Questrial" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="css/dist/fontdev.min.css">-->
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/button.css">
+</head>
+
+<body>
+    
+    <header class="open">
+        <span class="cls"></span>
+        <span>
+            <ul class="sub-menu ">
+                <li>
+                    <a href="#identificacao" title="inicio">Início</a>
+                </li>
+                <li>
+                    <a href="#sobre" title="sobre">Sobre mim</a>
+                </li>
+                <li>
+                    <a href="#habilidades" title="habilidades">Habilidades</a>
+                </li>
+                <li>
+                    <a href="#contato" title="contatos">Contatos</a>
+                </li>
+            </ul>
+        </span>
+        <span class="cls"></span>
+    </header>
+    
+    
+    <section id="identificacao" class="parallax">
+        <div class="section-bg">
+            <div class="line"></div>
+            <div class="identificacao-text">
+                <p>OLÁ, MEU NOME É</p>
+                <h1>BRIAN M. VIANA</h1>
+                <p>EU SOU UM DESENVOLVEDOR FULL STACK</p>
+            </div>
+            <div class="line"></div>
+        </div>
+    </section>
+    
+    <section id="sobre" class="parallax">
+        <div class="section-bg">
+            <div class="section-sobre">
+                <div class="section-sobre-container"></div>
+                    <div class="coluna-1">
+                        
+                        <div class="sobre-img">
+                            <img src="./img/perfil.jpg" alt="">
+                        </div>
+                        <div class="bt-curriculo">
+                            <button>Curriculo</button>
+                        </div>
+                        
+                    </div>
+                    <div class="coluna-2">
+                        
+                        <fieldset>
+                            <legend>SOBRE MIM</legend>
+                            <span>UM POUCO DA MINHA HISTORIA</span>
+                            <p>Meu nome é Brian Marques Viana, mas pode me chamado de Brian. Atualmente moro na cidade de Massapê, uma pequena cidade no interior do Ceará vizinho a Sobral.</p>
+                            
+                            <p>Tenho formação no curso técnico em Redes de Computadores pela EEEP Fca Neilyta Carneiro Albuquerque e graduação em Engenharia de Software pela Universidade Federal do Ceará - Campus Quixadá.</p>
+                            
+                            <p>Além disso, sou desenvolvedor de software Full Stack e apaixonado por tecnologia, em especial na área de Internet das Coisas, mas trabalho também como desenvolvimento Web (Front end e Back end) e Mobile.</p>
+                            
+                            <p>Em meu tempo livre costumo pesquisar sobre novas tecnologias, ler livros, além de assistir séries, jogar e sair com os amigos.</p>                            
+                        </fieldset>
+                        
+                    </div>
+                            
+            </div>
+        </div>
+    </section>
+    <section id="habilidades" class="parallax">
+        <div class="section-bg">
+            
+        </div>
+    </section>
+    
+    
+    
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        var $doc = $('html, body');
+        $('a').click(function() {
+            $doc.animate({
+                scrollTop: $($.attr(this, 'href')).offset().top
+            }, 500);
+            // $('#sidenav').hide('slow');
+            $('.open').removeClass('oppenned');
+            // event.stopPropagation();
+            return false;
+        });
+        $(document).ready(function() {
+            $(document).delegate('.open', 'click', function(event){
+                $(this).addClass('oppenned');
+                event.stopPropagation();
+            });
+            $(document).delegate('body', 'click', function(event) {
+                $('.open').removeClass('oppenned');
+                event.stopPropagation();
+            });
+            $(document).delegate('.cls', 'click', function(event){
+                $('.open').removeClass('oppenned');
+                event.stopPropagation();
+            });
+        });
+    </script>
+</body>
+</html>

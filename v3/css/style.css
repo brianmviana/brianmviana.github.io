@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+}
+
+html, body{
+    height: 100%;
+}
+.parallax {
+    /* The image used */
+    background-image: url("../img/bg3.jpg");
+  
+    /* Full height */
+    height: 100%;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+section{
+    width: 100%;
+    position: relative;
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+}
+
+.section-bg{
+    flex: 1;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(6, 31, 47, 0.8); 
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    align-items: center
+}
+
+.identificacao-text{
+    flex: 1 1 300px;
+    background-color: rgba(196, 196, 196, 0.1); 
+    color: white;
+    text-align: center;
+    font-size: 1.5em;
+    padding: 50px 0; 
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 3px;
+    border-right: 3px;
+    border-style: solid;
+    border-color: white;
+    flex-wrap: wrap;
+}
+
+.identificacao-text h1{
+    font-size: 1.8em;
+}
+
+.identificacao-text p{
+    font-size: 0.83em;
+    margin: 5px auto 10px;
+    font-family: 'Questrial', sans-serif;
+}
+
+.line{
+    flex: 2;
+    height: 3px;
+    background: #c4c4c4; 
+}
+
+
+
+.section-sobre{
+    width: 80%;
+    height: 100%;
+    margin: 0 auto;
+    /*transform: skewY(-5deg) translateY(100px);*/
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: stretch;
+}
+
+.section-sobre-container{
+    transform: skewY(-3deg);
+    position: absolute;
+    background-color:  rgba(6, 31, 47, 0.8);
+    width: calc(80% - 6px);
+    height: calc(90% - 6px);
+    border: 3px solid white;
+    display: flex;
+    z-index: 1;
+}
+
+.coluna-1{
+    flex: 1;
+    margin: 0 25px;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;
+    z-index: 2;
+}
+
+.coluna-2{
+    flex: 3;
+    margin: 0 25px 0 0;
+    z-index: 2;
+}
+
+.sobre-img{
+    flex: 2;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;    
+}
+.sobre-img img{
+    width: 100%;
+}
+
+.bt-curriculo{
+    flex: 1;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;    
+}
+
+fieldset{
+    width: calc(100% - 26px);
+    padding: 10px;
+    border: 3px solid white;
+    background-color: rgba(196, 196, 196, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+legend{
+    border-top: 0px;
+    border-bottom: 0px;
+    border-left: 3px;
+    border-right: 3px;
+    border-style: solid; 
+    border-color: #fff;
+    padding: 5px 10px 0px;
+    font-size: 1.8em;
+    background-color:  rgba(6, 31, 47, 0.7);
+    margin: 0 20px;
+    text-align: center
+}
+
+fieldset span{
+    flex: 0;
+    font-size: 1.3em;
+    line-height: 1.4em;
+    font-weight: bold;
+    color: white;
+    text-align: justify;
+    font-family: "Roboto";
+    margin: 0 20px;
+    text-align: justify;
+}
+
+fieldset p{
+    font-size: 1.2em;
+    line-height: 1.4em;
+    border-bottom: 1em;
+    color: white;
+    text-align: justify;
+    font-family: "Roboto";
+    margin: 10px 20px 15px;
+}
+
+
+.line2{
+    flex: 1;
+    width: 80%;
+    margin: 0 auto;
+    height: 3px;
+    background: #c4c4c4; 
+    position: absolute;
+    display: flex;
+    top: -3px;
+}
+
+
+
+@media only screen and (max-width: 1080px) {
+    .line{
+        flex: 1;
+        height: 3px;
+    }
+    .section-sobre, .line2{
+        width: 100%;
+    }
+    .section-sobre-container{
+        width: calc(100% - 6px);
+    }    
+}
+
+@media only screen and (max-width: 800px) {
+    .line{
+        flex: 0 1 50px;
+        height: 3px;
+    }
+    .section-sobre-container{
+        display: none;
+        visibility: hidden;
+    }
+    .section-sobre{
+        background-color:  rgba(6, 31, 47, 0.8);
+        width: calc(100% - 6px);
+        height: calc(100% - 6px);
+        border: 3px solid white;   
+    }
+    fieldset{
+        padding: 0px;
+        margin: 0px;
+    }
+    fieldset span{ 
+        display: block;
+        text-align: center;
+    }
+    .coluna-1{
+        flex: 1;
+    }
+    .coluna-2{
+        flex: 2;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .identificacao-text{
+        border: none;
+    }
+    .line{
+        flex: 0;
+        height: 0px;
+    }
+    .section-sobre{
+        flex: 1;
+        height: calc(100% - 6px);
+        display: flex;
+        flex-direction: column;
+        align-items: stretch; 
+        justify-content: flex-start;
+        align-content: unset;
+        flex-wrap: nowrap;
+        border-left: none;
+        border-right: none;
+        overflow: auto;
+    }
+    fieldset{
+        width: calc(100% - 6px);
+        justify-content: center;
+    }
+    legend{
+        text-align: center;
+        margin: 5px auto 0;
+    }
+    .coluna-1{
+        flex: 1;
+        height: 100%;
+        margin: 0 5px;
+    }
+    .coluna-2{
+        flex: 1;
+        margin: 0 5px;
+    }
+    .sobre-img{
+        flex: 1;
+        width: 60%;
+        margin: 5px auto;
+    }
+    .bt-curriculo{
+        width: 60%;
+        margin: 5px auto;
+    }
+}
