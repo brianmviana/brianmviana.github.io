@@ -5,6 +5,9 @@
 a{
     text-decoration: none;
 }
+html{
+    color: #fff;
+}
 
 .parallax {
     /* The image used */
@@ -26,6 +29,8 @@ section{
     position: relative;
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
+    height: calc(100% - 3px);
+    border-bottom: 3px solid white;
 }
 
 .section-bg{
@@ -81,9 +86,19 @@ section#identificacao{
 
 section#sobre{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;    
+}
+section#sobre .section-bg{
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;    
 }
 
+
+section#sobre.parallax{
+    background-image: url('../img/bg5.jpg');
+}
 .section-sobre{
     width: 80%;
     height: 100%;
@@ -99,7 +114,7 @@ section#sobre{
 }
 
 .section-sobre-container{
-    transform: skewY(-3deg);
+    /* transform: skewY(-3deg); */
     position: absolute;
     background-color:  rgba(6, 31, 47, 0.8);
     width: calc(80% - 6px);
@@ -123,6 +138,10 @@ section#sobre{
     flex: 3;
     margin: 0 25px 0 0;
     z-index: 2;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;
 }
 
 .sobre-img{
@@ -154,7 +173,7 @@ fieldset{
     flex-direction: column;
 }
 
-legend{
+fieldset legend{
     border-top: 0px;
     border-bottom: 0px;
     border-left: 3px;
@@ -191,32 +210,119 @@ fieldset p{
 }
 
 
+
 section#habilidades{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    min-height: 100vh;
+    border: 0px;
+}
+section#habilidades.parallax{
+    background-image: url("../img/bg1.jpg");
+}
+
+.habilidades-container{
+    width: 90%;
+    height: 90%;
+    margin: auto;
+    
+}
+
+.habilidades-container > fieldset{
+    margin: 50px auto;
+    /* border-right: 0px;
+    border-top: 0px;
+    border-bottom: 0px; */
+    background: transparent;
+}
+
+.habilidades-container > fieldset > legend{ 
+    /* border-right: 0px; */
+    background: transparent; 
+}
+
+.habilidades-container > fieldset > fieldset{  
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: baseline;
+    align-content: flex-start;
+    align-items: flex-start;
+}
+
+.card{
+    flex: 0 1 30%;
+    height: calc(100px - 2px);
+    margin: calc(1.2% - 2px);
+    background-color:  rgba(196, 196, 196, 0.4);
+    display: flex;
+    border: 1px solid white;
+    padding: 5px 5px;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
 }
 
 
+.card .col-1{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    /* background-color:  black; */
+    border-radius: 5px;
+    background: #fff;
+}
 
+.card .col-2{
+    flex: 3;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.card-title{
+    font-size: 1.3em;
+    line-height: 1em;
+}
+.card-text{
+    font-size: 0.9em;
+    line-height: 1.3em;
+    text-align: left;
+}
 
 @media only screen and (max-width: 1080px) {
     .identificacao-line{
         flex: 1;
         height: 3px;
     }
-    .section-sobre, .line2{
+    .section-sobre{
         width: 100%;
     }
     .section-sobre-container{
         width: calc(100% - 6px);
     }    
+    .habilidades-container{
+        width: 100%;
+    }
+    .card .col-2{
+        flex: 2;
+    }
+    .card-title{
+        font-size: 1em;
+        line-height: 0.7em;
+    }
+    .card-text{
+        font-size: 0.7em;
+        line-height: 1em;
+        text-align: left;
+    }
 }
 
-@media only screen and (max-width: 800px) {
-    .identificacao-line{
-        flex: 0 1 50px;
-        height: 3px;
-    }
+@media only screen and (max-width: 900px) {
     .section-sobre-container{
         display: none;
         visibility: hidden;
@@ -227,24 +333,75 @@ section#habilidades{
         height: calc(100% - 6px);
         border: 3px solid white;   
     }
-    fieldset{
+    .coluna-2 fieldset{
         padding: 0px;
         margin: 0px;
+        width: calc(100% - 16px);
     }
-    fieldset span{ 
+    .coluna-2 fieldset span{ 
         display: block;
         text-align: center;
+        font-size: 1em;
+        line-height: 1.2em;
+    }
+
+    .coluna-2 fieldset p{
+        font-size: 0.8em;
+        line-height: 1.1em;
     }
     .coluna-1{
         flex: 1;
     }
     .coluna-2{
         flex: 2;
+        justify-content: flex-start;
+    }    
+
+    .habilidades-container > fieldset{
+        margin: 25px auto;
+    }
+    .habilidades-container > fieldset > fieldset{  
+        justify-content: center;
+    }
+    .card{
+        min-width: 300px;
+        margin: calc(1.1% - 2px);
+    }    
+}
+
+@media only screen and (max-width: 800px) {
+    .identificacao-line{
+        flex: 0 1 50px;
+        height: 3px;
+    }
+    fieldset{
+        padding: 0px;
+        margin: 0px;
+        width: calc(100% - 16px);
+    }
+    .coluna-1{
+        flex: 1;
+        margin: 0 auto;
+        flex-direction: column;
+    }
+    .coluna-2{
+        flex: 2;
+        margin: 0px;
+    }
+    .habilidades-container > fieldset > legend, .habilidades-container > fieldset > fieldset > legend{ 
+        font-size: 1.5em;
+    }
+    .open{
+        top:20px;
+        right: 20px;
     }
 }
 
-@media only screen and (max-width: 700px) {
-
+@media only screen and (max-width: 750px) {
+    .identificacao-line{
+        flex: 0;
+        height: 0px;
+    }
     .section-sobre{
         flex: 1;
         height: calc(100% - 6px);
@@ -281,7 +438,7 @@ section#habilidades{
         flex-direction: row;
     }
     .coluna-2{
-        flex: 1;
+        flex: 2;
         margin: 0 5px 5px;
     }
     .sobre-img{
@@ -295,5 +452,79 @@ section#habilidades{
     }
     .btn-curriculo{
         margin: 0 20px 20px;
+    } 
+    .habilidades-container > fieldset > legend{
+        margin: 5px auto;
     }
+    .habilidades-container > fieldset > fieldset > legend{ 
+        font-size: 1.3em;
+        margin: 5px auto;
+    }
+    .habilidades-container > fieldset, .habilidades-container > fieldset > fieldset{
+        width: 100%;
+        border-left: 0px;
+        border-right: 0px;
+    }
+    .card{
+        margin: 5px 0px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .open{
+        top:5px;
+        right: 5px;
+    }
+}
+
+i{
+    font-size: 80px;
+    color: #1A6FB4;
+}
+
+i.color-html{
+    color: #e44d26;
+}
+i.color-css{
+    color: #1A6FB4;
+}
+i.color-js{
+    background: black;
+    color: #F7E018;
+}
+i.color-materialize{
+    color: #EB7077;
+}
+i.color-bootstrap{
+    color: #563D7C;
+}
+i.color-jquery{
+    color: #0865A6;
+}
+i.color-vue{
+    color: #41B883;
+}
+i.color-java{
+    color: #084AA1;
+}
+i.color-spring{
+    color: #6DB33F;
+}
+i.color-nodejs{
+    color: #4C8D49;
+}
+i.color-android{
+    color: #92BA3A;
+}
+i.color-mysql{
+    color: #00618a;
+}
+i.color-postgres{
+    color: #326187;
+}
+i.color-mongodb{
+    color: #579035;    
+}
+i.color{
+    color: #00618a;
 }
