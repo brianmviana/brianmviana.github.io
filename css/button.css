@@ -17,6 +17,7 @@
     font-size: 1em;
     cursor: pointer;
     letter-spacing: 0.07em;
+    text-align: center;
 }
 .btn-curriculo a .text {
     font-family: proxima-nova, monospace;
@@ -31,13 +32,13 @@
     left: calc(0.7em * 1.2);
     right: calc(0.7em * 1.2);
     height: 3px;
-    background: #2c70ff;
+    background: #ffffff;
     transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
     transform-origin: left;
 }
 .btn-curriculo .line {
     position: absolute;
-    background: #2c70ff;
+    background: #ffffff;
 }
 .btn-curriculo .line.-right, .btn-curriculo .line.-left {
     width: 3px;
