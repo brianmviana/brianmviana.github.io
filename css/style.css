@@ -29,8 +29,8 @@ section{
     position: relative;
     font-family: 'Josefin Sans', sans-serif;
     display: flex;
-    height: calc(100% - 3px);
-    border-bottom: 3px solid white;
+    height: calc(100% );
+    /* border-bottom: 3px solid white; */
 }
 
 .section-bg{
@@ -92,12 +92,13 @@ section#sobre{
 section#sobre .section-bg{
     width: 100%;
     height: 100%;
-    min-height: 100vh;    
+    min-height: 100vh;
+    /* background-color:  #2C98E9; */
+
 }
 
-
 section#sobre.parallax{
-    background-image: url('../img/bg5.jpg');
+    background-image: url('../img/bg3.jpg');
 }
 .section-sobre{
     width: 80%;
@@ -111,18 +112,28 @@ section#sobre.parallax{
     flex-wrap: wrap;
     align-content: center;
     align-items: stretch;
+    
 }
 
 .section-sobre-container{
     /* transform: skewY(-3deg); */
     position: absolute;
-    background-color:  rgba(6, 31, 47, 0.8);
+    /* background-color:  rgba(6, 31, 47, 1); */
+    background-color:  white;
     width: calc(80% - 6px);
     height: calc(90% - 6px);
     border: 3px solid white;
     display: flex;
     z-index: 1;
 }
+.section-sobre.parallax{
+    background-image: none;
+}
+.section-sobre-container.parallax{
+    background-image: none;
+    background-color: rgba(6, 31, 47, 0.8);
+}
+
 
 .coluna-1{
     flex: 1;
@@ -154,7 +165,6 @@ section#sobre.parallax{
 .sobre-img svg polygon{
     stroke: #ffffff;
     stroke-width: 1px;
- 
 }
 
 .bt-curriculo{
@@ -168,7 +178,7 @@ fieldset{
     width: calc(100% - 26px);
     padding: 10px;
     border: 3px solid white;
-    background-color: rgba(196, 196, 196, 0.1);
+    background-color: rgba(196, 196, 196, 0);
     display: flex;
     flex-direction: column;
 }
@@ -179,10 +189,10 @@ fieldset legend{
     border-left: 3px;
     border-right: 3px;
     border-style: solid; 
-    border-color: #fff;
+    border-color: white;
     padding: 5px 10px 0px;
     font-size: 1.8em;
-    background-color:  rgba(6, 31, 47, 0.7);
+    /* background-color:  rgba(6, 31, 47, 0.7); */
     margin: 0 20px;
     text-align: center
 }
@@ -218,7 +228,7 @@ section#habilidades{
     border: 0px;
 }
 section#habilidades.parallax{
-    background-image: url("../img/bg1.jpg");
+    background-image: url("../img/bg3.jpg");
 }
 
 .habilidades-container{
@@ -233,16 +243,17 @@ section#habilidades.parallax{
     /* border-right: 0px;
     border-top: 0px;
     border-bottom: 0px; */
-    background: transparent;
+    background-color:  rgba(6, 31, 47, 0.8);
 }
 
 .habilidades-container > fieldset > legend{ 
     /* border-right: 0px; */
-    background: transparent; 
+    /* background: transparent;  */
+    background-color:  rgba(6, 31, 47, 0.8);
 }
 
 .habilidades-container > fieldset > fieldset{  
-    margin: 10px 0px;
+    margin: 25px 0px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -253,16 +264,18 @@ section#habilidades.parallax{
 
 .card{
     flex: 0 1 30%;
-    height: calc(100px - 2px);
-    margin: calc(1.2% - 2px);
-    background-color:  rgba(196, 196, 196, 0.4);
+    height: calc(100px);
+    margin: calc(1.1%);
+    /* background-color:  rgba(196, 196, 196, 0.4); */
     display: flex;
-    border: 1px solid white;
+    /* border: 1px solid rgba(196, 196, 196, 0.4); */
     padding: 5px 5px;
     justify-content: space-between;
     font-family: 'Roboto', sans-serif;
+    background-color: white;
+    border-radius: 5px;
+ 
 }
-
 
 .card .col-1{
     flex: 1;
@@ -271,6 +284,7 @@ section#habilidades.parallax{
     align-items: center;
     flex-direction: row;
     /* background-color:  black; */
+    border: 2px solid rgba(196, 196, 196, 1);
     border-radius: 5px;
     background: #fff;
 }
@@ -287,12 +301,168 @@ section#habilidades.parallax{
 .card-title{
     font-size: 1.3em;
     line-height: 1em;
+    color: rgba(6, 31, 47, 1);
 }
 .card-text{
     font-size: 0.9em;
     line-height: 1.3em;
     text-align: left;
+    color: rgba(6, 31, 47, 1);
 }
+
+
+
+section#contato{
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 25px - 1rem);
+}
+
+section#contato .section-bg{
+    width: 100%;
+    height: 100%;
+    min-height: calc(100vh - 25px - 1rem);
+    /* background-color:  #2C98E9; */
+}
+
+fieldset.contato{
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(6, 31, 47, 1);
+}
+
+fieldset.contato legend{
+    margin: 0 auto;
+    flex: 1;
+    /* background-color: rgba(6, 31, 47, 1); */
+    display: flex;
+    border: none;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0px;
+}
+.contato-img{
+    display: flex;
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    margin: 0px;
+}
+
+.contato-img svg{
+    max-width: 150px;
+}
+
+.contato-img svg polygon{
+    stroke: #ffffff;
+    stroke-width: 1px;
+}
+.contato-img::before, .contato-img::after{
+    content: '';
+    display: inline-block;
+    width: 3px;
+    height: 50px;
+    background: white;
+}
+
+.contato-info{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 1.25em;
+    line-height: 1.2em;
+    color: white;
+    text-decoration: none;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-flow: column;
+    margin: 0px;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+.item-contato{
+    margin: 0 10px;
+    flex-wrap: wrap;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    display: block;
+    /* background-color: rgba(255,255,255,0.05 */
+    flex: 1;
+}
+
+.item-contato p{
+    flex: 1;
+    font-size: 0.8em;
+    display: flex;
+}
+.item-contato h2{
+    flex: 2;
+    padding: 0 0 20px 0;
+    font-size: 1.875rem;
+    display: flex;
+}
+
+.contato-line{
+    width: 80%;
+    height: 3px;
+    margin: 0 auto 20px; 
+    background: #c4c4c4; 
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: row;
+    font-size: 1em;
+    line-height: 1.4em;
+    /*border-bottom: 1em;*/
+    color: white;
+    text-decoration: none;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    justify-content: center;
+}
+.item-redes-sociais i{
+    margin: 0px 5px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    font-size: 1.5em;
+    border-radius: 20px;
+    /*background-color: rgba(255,255,255,0.05);*/
+    color: white;
+    transition: color 500ms;
+}
+.item-redes-sociais i:hover{
+    color: #00618a;
+    /*color: black;*/
+    transition: color 500ms;
+    border-radius: 20px;
+}
+
+/*Footer*/
+.footer{
+    display: flex;
+    background: rgba(6, 31, 47, 1);
+    align-items: center;
+    border-top: 3px solid white;
+}
+.footer p{
+    padding: 10px;
+    flex: 1;
+    text-align: center;
+    font-size: 1em;
+    color: white;
+
+}
+
+
 
 @media only screen and (max-width: 1080px) {
     .identificacao-line{
@@ -395,7 +565,21 @@ section#habilidades.parallax{
         top:20px;
         right: 20px;
     }
+    .habilidades-container > fieldset > legend{
+        margin: 5px auto;
+    }
+    .habilidades-container > fieldset > fieldset > legend{ 
+        font-size: 1.3em;
+        margin: 5px auto;
+    }
+    .habilidades-container > fieldset, .habilidades-container > fieldset > fieldset{
+        width: 100%;
+        border-left: 0px;
+        border-right: 0px;
+    }
+
 }
+
 
 @media only screen and (max-width: 750px) {
     .identificacao-line{
@@ -453,20 +637,29 @@ section#habilidades.parallax{
     .btn-curriculo{
         margin: 0 20px 20px;
     } 
-    .habilidades-container > fieldset > legend{
-        margin: 5px auto;
+    fieldset.contato{
+        width: 80%;
     }
-    .habilidades-container > fieldset > fieldset > legend{ 
-        font-size: 1.3em;
-        margin: 5px auto;
+    
+    .item-contato p{
+        flex: 1;
+        font-size: 0.5em;
+        display: flex;
     }
-    .habilidades-container > fieldset, .habilidades-container > fieldset > fieldset{
+    .item-contato h2{
+        flex: 2;
+        padding: 0 0 20px 0;
+        font-size: 1.4rem;
+        display: flex;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    fieldset.contato{
         width: 100%;
-        border-left: 0px;
-        border-right: 0px;
-    }
-    .card{
-        margin: 5px 0px;
+        border-left: none;
+        border-right: none;
     }
 }
 
@@ -474,6 +667,9 @@ section#habilidades.parallax{
     .open{
         top:5px;
         right: 5px;
+    }
+    .card{
+        margin: 5px 0px;
     }
 }
 
@@ -504,6 +700,9 @@ i.color-jquery{
 i.color-vue{
     color: #41B883;
 }
+i.color-react{
+    color: #61DAFB;
+}
 i.color-java{
     color: #084AA1;
 }
@@ -525,6 +724,20 @@ i.color-postgres{
 i.color-mongodb{
     color: #579035;    
 }
+i.color-aws{
+    color: #EC912D;
+}
+i.color-openstack{
+    color: #DC1242;
+}
+i.color-git{
+    color: #F04C2C;
+}
+i.color-arduino{
+    color: #00979D;
+}
+
 i.color{
     color: #00618a;
 }
+
